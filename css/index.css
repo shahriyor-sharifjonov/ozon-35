@@ -7,6 +7,9 @@
   scrollbar-width: thin;
   scrollbar-color: #00498D #E4E4E4;
 }
+*:focus {
+  outline: none;
+}
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -25,6 +28,10 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #00498D;
+}
+
+textarea {
+  resize: none;
 }
 
 html {
@@ -101,4 +108,22 @@ body {
   height: 100%;
   width: 100%;
   margin-bottom: 11px;
+}
+.sidebar__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #494A4A;
+  margin-bottom: 15px;
+}
+.sidebar__textarea {
+  border: none;
+  width: 100%;
+  padding-right: 10px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #494A4A;
+  margin-top: 28px;
+  height: calc(100% - 360px);
 }
