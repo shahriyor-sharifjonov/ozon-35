@@ -5,6 +5,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
+    script(src="https://cdn.ckeditor.com/4.16.1/standard-all/ckeditor.js")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css")
     link(rel="stylesheet", href="css/index.css")
   body
@@ -33,7 +34,66 @@ html(lang="en")
             button.tags-xl-tag Тег (1)
             button.tags-xl-tag Тег (1)
         .content 
-          
+          .row 
+            .col-7
+              .content__input-div
+                label(for="zagalovok").content__label Заголовок
+                input(id="zagalovok" maxlength="80" placeholder="Название заголовка статьи на языке оригинала").content__input 
+                p.content__count <span class="green">0</span> из 80
+              .content__input-div
+                label(for="title").content__label Title страницы
+                input(id="title" maxlength="80" placeholder="Название заголовка статьи на языке оригинала").content__input 
+                p.content__count <span class="green">0</span> из 80
+              .content__input-div
+                label(for="desc").content__label Description страницы
+                textarea(class="content__textarea" id="desc" col="30" row="3" maxlength="80" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do")
+                p.content__count <span class="green">0</span> из 80
+              .content__input-div
+                label(for="ks").content__label КС страницы
+                textarea(class="content__textarea" col="30" row="3" maxlength="80" id="ks" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do")
+                p.content__count <span class="green">0</span> из 80
+            .col-5.content__right
+              .content__input-div
+                label(for="url").content__label URL
+                input(id="url" maxlength="80" placeholder="www.sddfoksoifu82390.ry").content__input
+              .content__right__main
+                .content__right__main__left
+                  label.content__label Фото и описание
+                .content__right__main__right
+                  .content__right__main__right__img-div   
+                    img(src="images/right-content.png", alt="team").content__right__main__right__img
+                  .content__right__main__right__content
+                    .content__right__main__right__content__top
+                      .content__right__main__right__content__top__texts
+                        p.content__right__title Foto1.jpg
+                        p.content__right__p 450x460
+                      .content__right__main__right__content__top__btns
+                        button.content__right__btn
+                          svg(width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M14.5207 0H6.45531C3.11925 0 0.40625 2.691 0.40625 6V19C0.40625 19.2652 0.512468 19.5196 0.701538 19.7071C0.890608 19.8946 1.14704 20 1.41443 20H14.5207C17.8568 20 20.5698 17.309 20.5698 14V6C20.5698 2.691 17.8568 0 14.5207 0ZM18.5534 14C18.5534 16.206 16.7448 18 14.5207 18H2.4226V6C2.4226 3.794 4.23127 2 6.45531 2H14.5207C16.7448 2 18.5534 3.794 18.5534 6V14Z" fill="white")
+                            path(d="M5.44531 12.9869V14.9859H7.46066L13.0349 9.46394L11.0205 7.46594L5.44531 12.9869Z" fill="white")
+                            path(d="M13.987 8.522L11.9727 6.522L13.5081 5L15.5245 6.999L13.987 8.522Z" fill="white")
+                        button.content__right__btn
+                          svg(width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M2 2H15V9H17V2C17 0.897 16.103 0 15 0H2C0.897 0 0 0.897 0 2V14C0 15.103 0.897 16 2 16H10V14H2V2Z" fill="white")
+                            path(d="M6 8L3 12H14L10 6L7 10L6 8Z" fill="white")
+                            path(d="M17 11H15V14H12V16H15V19H17V16H20V14H17V11Z" fill="white")
+                    .content__right__main__right__content__bottom 
+                      label(for="rightDesc").content__right__p Описание
+                      input(type="text" id="rightDesc" placeholder="это текст-'рыба', часто используемый в печат").content__input
+                      label(for="rightAld").content__right__p.mt-6 Атрибут Alt
+                      input(type="text" id="rightAld" placeholder="это текст-'рыба', часто используемый в печат").content__input
+          .visual 
+            .visual__header 
+              <textarea id="editor1" name="editor1" class="visual__textarea"></textarea>
+              .visual__footer
+                p.content__right__p.text-align-right 3500 из 4789
+                button.save-btn 
+                  .save-btn__i
+                    svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M15.7751 6H14.4522C14.1645 6 13.8909 6.13869 13.7217 6.37644L9.28767 12.5467L7.2794 9.75024C7.11017 9.51532 6.83939 9.37381 6.54887 9.37381H5.22601C5.04267 9.37381 4.93548 9.58325 5.04267 9.73326L8.55714 14.6241C8.64016 14.7404 8.74961 14.8352 8.87641 14.9005C9.00321 14.9659 9.14371 15 9.28626 15C9.42882 15 9.56932 14.9659 9.69612 14.9005C9.82292 14.8352 9.93237 14.7404 10.0154 14.6241L15.9556 6.35946C16.0656 6.20945 15.9584 6 15.7751 6Z")
+                      path(d="M10.5 0C4.70156 0 0 4.70156 0 10.5C0 16.2984 4.70156 21 10.5 21C16.2984 21 21 16.2984 21 10.5C21 4.70156 16.2984 0 10.5 0ZM10.5 19.2188C5.68594 19.2188 1.78125 15.3141 1.78125 10.5C1.78125 5.68594 5.68594 1.78125 10.5 1.78125C15.3141 1.78125 19.2188 5.68594 19.2188 10.5C19.2188 15.3141 15.3141 19.2188 10.5 19.2188Z")
+                  p Сохранить
       .col-12.col-xl-3
         .sidebar
           h2.sidebar__title КС статьи
@@ -77,3 +137,4 @@ html(lang="en")
           textarea(class="sidebar__textarea" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quisquam eveniet id ad eum veniam, neque ab quos harum assumenda suscipit dolorum eaque nihil, excepturi porro, molestiae animi nobis tempora expedita veritatis? Optio porro aliquid, ab cupiditate delectus excepturi nihil non est accusamus! Obcaecati omnis asperiores, incidunt quidem possimus perspiciatis praesentium maxime ea molestias aperiam doloremque, voluptates voluptatibus nihil consectetur corporis inventore deserunt modi accusamus eos animi? Impedit maiores necessitatibus laboriosam voluptatibus accusamus, vitae doloremque tempora, minus quasi pariatur sed dicta est nesciunt repellat voluptas quia error et magnam cupiditate animi dignissimos enim exercitationem reprehenderit. Minima eos earum nesciunt qui distinctio officiis atque, amet, tempore, cum voluptates delectus necessitatibus odio quas quidem aspernatur aliquid assumenda perferendis magni expedita ducimus at illo. Nobis libero cumque debitis fugiat rem earum pariatur, dolore eligendi illum. Accusantium quos labore explicabo laborum nam inventore atque. Magnam, repellat aliquam. Quidem ducimus maxime quos est, quibusdam id sit totam, aliquid quas qui incidunt culpa corporis nulla optio ab pariatur provident at. Dolor magnam distinctio soluta, officiis et eius dicta rerum repellendus necessitatibus, quaerat eligendi voluptatibus quos sit delectus quisquam quidem dolores eos doloribus impedit id tempore molestiae blanditiis eaque nam! Esse assumenda, quas nam totam, odio voluptatibus iusto provident sapiente omnis cumque eligendi enim doloremque cum mollitia! Quam, quaerat repudiandae quidem labore tenetur cum soluta culpa quo repellat doloribus excepturi, in modi? Maiores vel rem suscipit. Consequatur vero minima autem, voluptatem magni amet quidem iusto fugiat accusantium eum consectetur officia praesentium cum itaque quisquam natus enim ut eius sunt repellat, neque deleniti quam ex. Facere, explicabo. Deserunt earum illo distinctio, at nostrum necessitatibus totam non! Alias, laboriosam ratione! Repellat repellendus non reiciendis minus enim voluptatibus asperiores ducimus. Quam libero qui quidem illum dolorum dolor, quod ipsam nesciunt fugiat eaque similique laborum voluptatem, consequatur sunt? Culpa quam dolor eaque omnis doloremque corrupti libero ipsum expedita, ratione voluptatibus. Alias doloribus architecto porro. Fugiat, provident quo? Corrupti autem laborum sequi numquam, commodi sed similique inventore, magnam sint eaque, aspernatur delectus velit praesentium itaque in. Ad porro repellendus, inventore a ipsum veniam illo? Sunt atque fugit quis porro vero provident, eveniet facere. Ab, nobis? Repellat praesentium reprehenderit quos itaque non saepe culpa tenetur quisquam asperiores fuga rem, dolore, harum accusamus a odio aliquid unde amet delectus possimus odit nostrum ipsum! Suscipit vitae quidem quae, nobis eligendi laboriosam aut nulla labore totam consectetur error laudantium. Culpa nesciunt ipsum magnam qui totam architecto dolore explicabo ipsa? Nemo quam harum placeat accusantium rem quis ullam atque aut id sed sequi est ipsam quod amet quia porro, unde impedit cupiditate neque, consectetur ut? Cumque facilis dolores atque impedit temporibus incidunt recusandae rerum excepturi, suscipit maxime ratione rem voluptas vero molestiae hic quis culpa eaque, iusto vitae! Nihil vitae eligendi numquam perspiciatis accusantium saepe harum doloribus exercitationem sit, laborum molestias velit commodi, maxime dignissimos ab illo repudiandae praesentium necessitatibus consectetur nemo. Corporis possimus ad in dicta. Enim sunt ea ducimus cum quod, veritatis, repudiandae expedita dolorum accusantium voluptatem totam mollitia eveniet. Aperiam velit animi repudiandae esse?")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") 
   script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js") 
+  script(src="scripts/index.js") 

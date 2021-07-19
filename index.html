@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard-all/ckeditor.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
   </head>
@@ -36,7 +37,93 @@
             <button class="tags-xl-tag">Тег (1)</button>
           </div>
         </div>
-        <div class="content"> </div>
+        <div class="content"> 
+          <div class="row"> 
+            <div class="col-7">
+              <div class="content__input-div">
+                <label class="content__label" for="zagalovok">Заголовок</label>
+                <input class="content__input" id="zagalovok" maxlength="80" placeholder="Название заголовка статьи на языке оригинала">
+                <p class="content__count"><span class="green">0</span> из 80</p>
+              </div>
+              <div class="content__input-div">
+                <label class="content__label" for="title">Title страницы</label>
+                <input class="content__input" id="title" maxlength="80" placeholder="Название заголовка статьи на языке оригинала">
+                <p class="content__count"><span class="green">0</span> из 80</p>
+              </div>
+              <div class="content__input-div">
+                <label class="content__label" for="desc">Description страницы</label>
+                <textarea class="content__textarea" id="desc" col="30" row="3" maxlength="80" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"></textarea>
+                <p class="content__count"><span class="green">0</span> из 80</p>
+              </div>
+              <div class="content__input-div">
+                <label class="content__label" for="ks">КС страницы</label>
+                <textarea class="content__textarea" col="30" row="3" maxlength="80" id="ks" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"></textarea>
+                <p class="content__count"><span class="green">0</span> из 80</p>
+              </div>
+            </div>
+            <div class="col-5 content__right">
+              <div class="content__input-div">
+                <label class="content__label" for="url">URL</label>
+                <input class="content__input" id="url" maxlength="80" placeholder="www.sddfoksoifu82390.ry">
+              </div>
+              <div class="content__right__main">
+                <div class="content__right__main__left">
+                  <label class="content__label">Фото и описание</label>
+                </div>
+                <div class="content__right__main__right">
+                  <div class="content__right__main__right__img-div">  <img class="content__right__main__right__img" src="images/right-content.png" alt="team"></div>
+                  <div class="content__right__main__right__content">
+                    <div class="content__right__main__right__content__top">
+                      <div class="content__right__main__right__content__top__texts">
+                        <p class="content__right__title">Foto1.jpg</p>
+                        <p class="content__right__p">450x460</p>
+                      </div>
+                      <div class="content__right__main__right__content__top__btns">
+                        <button class="content__right__btn">
+                          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5207 0H6.45531C3.11925 0 0.40625 2.691 0.40625 6V19C0.40625 19.2652 0.512468 19.5196 0.701538 19.7071C0.890608 19.8946 1.14704 20 1.41443 20H14.5207C17.8568 20 20.5698 17.309 20.5698 14V6C20.5698 2.691 17.8568 0 14.5207 0ZM18.5534 14C18.5534 16.206 16.7448 18 14.5207 18H2.4226V6C2.4226 3.794 4.23127 2 6.45531 2H14.5207C16.7448 2 18.5534 3.794 18.5534 6V14Z" fill="white"></path>
+                            <path d="M5.44531 12.9869V14.9859H7.46066L13.0349 9.46394L11.0205 7.46594L5.44531 12.9869Z" fill="white"></path>
+                            <path d="M13.987 8.522L11.9727 6.522L13.5081 5L15.5245 6.999L13.987 8.522Z" fill="white"></path>
+                          </svg>
+                        </button>
+                        <button class="content__right__btn">
+                          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2H15V9H17V2C17 0.897 16.103 0 15 0H2C0.897 0 0 0.897 0 2V14C0 15.103 0.897 16 2 16H10V14H2V2Z" fill="white"></path>
+                            <path d="M6 8L3 12H14L10 6L7 10L6 8Z" fill="white"></path>
+                            <path d="M17 11H15V14H12V16H15V19H17V16H20V14H17V11Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="content__right__main__right__content__bottom"> 
+                      <label class="content__right__p" for="rightDesc">Описание</label>
+                      <input class="content__input" type="text" id="rightDesc" placeholder="это текст-'рыба', часто используемый в печат">
+                      <label class="content__right__p mt-6" for="rightAld">Атрибут Alt</label>
+                      <input class="content__input" type="text" id="rightAld" placeholder="это текст-'рыба', часто используемый в печат">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="visual"> 
+            <div class="visual__header">
+               <textarea id="editor1" name="editor1" class="visual__textarea"></textarea>
+              <div class="visual__footer">
+                <p class="content__right__p text-align-right">3500 из 4789</p>
+                <button class="save-btn"> 
+                  <div class="save-btn__i">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.7751 6H14.4522C14.1645 6 13.8909 6.13869 13.7217 6.37644L9.28767 12.5467L7.2794 9.75024C7.11017 9.51532 6.83939 9.37381 6.54887 9.37381H5.22601C5.04267 9.37381 4.93548 9.58325 5.04267 9.73326L8.55714 14.6241C8.64016 14.7404 8.74961 14.8352 8.87641 14.9005C9.00321 14.9659 9.14371 15 9.28626 15C9.42882 15 9.56932 14.9659 9.69612 14.9005C9.82292 14.8352 9.93237 14.7404 10.0154 14.6241L15.9556 6.35946C16.0656 6.20945 15.9584 6 15.7751 6Z"></path>
+                      <path d="M10.5 0C4.70156 0 0 4.70156 0 10.5C0 16.2984 4.70156 21 10.5 21C16.2984 21 21 16.2984 21 10.5C21 4.70156 16.2984 0 10.5 0ZM10.5 19.2188C5.68594 19.2188 1.78125 15.3141 1.78125 10.5C1.78125 5.68594 5.68594 1.78125 10.5 1.78125C15.3141 1.78125 19.2188 5.68594 19.2188 10.5C19.2188 15.3141 15.3141 19.2188 10.5 19.2188Z"></path>
+                    </svg>
+                  </div>
+                  <p>Сохранить</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-12 col-xl-3">
         <div class="sidebar">
@@ -94,4 +181,5 @@
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"> </script>
+  <script src="scripts/index.js"> </script>
 </html>
