@@ -91,7 +91,7 @@ body {
 }
 .tags-xl-tag:last-child {
   margin-right: 0;
-}
+} 
 .tags-xl-tag.current {
   color: #FFFFFF;
   background: #00498D;
