@@ -74,6 +74,8 @@ body {
 }
 .tags-xl-tag {
   width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
   margin-right: 4px;
   border: 1px solid #B4B4B4;
   -webkit-box-sizing: border-box;
