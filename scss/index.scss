@@ -59,7 +59,7 @@ body{
 }
 
 #cke_editor1{
-  height: fill-available;
+  height: calc(100% - 80px);
 }
 
 #contentTextres{
@@ -121,6 +121,8 @@ body{
   border-radius: 6px;
   margin-bottom: 11px;
   padding-top: 27px;
+  display: flex;
+  flex-direction: column;
 
   &__input-div{
     display: flex;
@@ -316,9 +318,26 @@ body{
   }
 }
 
+#editor1{
+  height: 100%;
+}
+
+.cke_inner.cke_reset{
+  height: 100%;
+}
+
+.cke_contents.cke_reset{
+  height: calc(100% - 69px);
+}
+
 .visual{
   margin-left: 113px;
   margin-right: 16px;
+  height: 100%;
+
+  &__header{
+    height: 100%;
+  }
   
   &__footer{
     display: flex;

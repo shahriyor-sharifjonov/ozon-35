@@ -58,9 +58,7 @@ body {
 }
 
 #cke_editor1 {
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: fill-available;
+  height: calc(100% - 80px);
 }
 
 #contentTextres {
@@ -122,6 +120,13 @@ body {
   border-radius: 6px;
   margin-bottom: 11px;
   padding-top: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .content__input-div {
   display: -webkit-box;
@@ -339,9 +344,25 @@ body {
   height: calc(100% - 360px);
 }
 
+#editor1 {
+  height: 100%;
+}
+
+.cke_inner.cke_reset {
+  height: 100%;
+}
+
+.cke_contents.cke_reset {
+  height: calc(100% - 69px);
+}
+
 .visual {
   margin-left: 113px;
   margin-right: 16px;
+  height: 100%;
+}
+.visual__header {
+  height: 100%;
 }
 .visual__footer {
   display: -webkit-box;

@@ -1,5 +1,5 @@
 CKEDITOR.replace('editor1', {
-  height: 300,
+  height: 'none',
   baseFloatZIndex: 10005,
   toolbarGroups: [
   {
