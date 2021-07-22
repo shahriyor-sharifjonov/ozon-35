@@ -63,6 +63,11 @@ body {
   height: fill-available;
 }
 
+#contentTextres {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
 .tags-xl {
   width: 100%;
   padding: 0 0 8px 0;
@@ -349,10 +354,6 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding-top: 14px;
-}
-.visual__footer p {
-  margin-bottom: 0;
-  margin-right: 30px;
 }
 
 .save-btn {

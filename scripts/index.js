@@ -35,6 +35,7 @@ CKEDITOR.replace('editor1', {
 removeButtons: 'Specialchar'
 });
 
+
 const tag = document.querySelectorAll('.tags-xl-tag');
 
 tag.forEach(el => {
@@ -42,3 +43,29 @@ tag.forEach(el => {
     el.classList.toggle('current');
   })
 })
+
+const zagolovok = document.querySelector('#zagalovok').value;
+const zagolovokres = document.querySelector('#zagalovokres');
+const title = document.querySelector('#title').value;
+const titleres = document.querySelector('#titleres');
+const desc = document.querySelector('#desc').value;
+const descres = document.querySelector('#descres');
+const ks = document.querySelector('#ks').value;
+const ksres = document.querySelector('#ksres');
+const contentTextres = document.querySelector('#contentTextres');
+
+let interval = setInterval(() => {
+  const zagolovok = document.querySelector('#zagalovok').value;
+  const title = document.querySelector('#title').value;
+  const desc = document.querySelector('#desc').value;
+  const ks = document.querySelector('#ks').value;
+  const contentText = CKEDITOR.instances['editor1'].getData();
+
+  
+  contentTextres.innerHTML = contentText.length + " из 4789";
+  zagolovokres.innerHTML = zagolovok.length + " из <span class=\"green\">80</span>";
+  titleres.innerHTML = title.length + " из <span class=\"green\">80</span>";
+  descres.innerHTML = desc.length + " из <span class=\"green\">80</span>";
+  ksres.innerHTML = ks.length + " из <span class=\"green\">80</span>";
+}, 100);
+
