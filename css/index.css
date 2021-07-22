@@ -97,6 +97,9 @@ body {
   -webkit-transition: 200ms ease;
   transition: 200ms ease;
 }
+.tags-xl-tag:hover {
+  color: #494A4A;
+}
 .tags-xl-tag:last-child {
   margin-right: 0;
 }
@@ -215,6 +218,20 @@ body {
   background: #00498D;
   border: none;
   margin-left: 6px;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+.content__right__btn:hover {
+  background: #fff;
+  border: 2px solid #00498D;
+}
+.content__right__btn:hover svg {
+  fill: #00498D;
+}
+.content__right__btn svg {
+  fill: #fff;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
 }
 .content__right__main {
   display: -webkit-box;

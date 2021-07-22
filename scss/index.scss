@@ -92,6 +92,10 @@ body{
     padding: 6px 0;
     transition: 200ms ease;
 
+    &:hover{
+      color: #494A4A;
+    }
+
     &:last-child{
       margin-right: 0;
     }
@@ -209,6 +213,21 @@ body{
       background: #00498D;
       border: none;
       margin-left: 6px;
+      transition: 200ms ease;
+
+      &:hover{
+        background: #fff;
+        border: 2px solid #00498D;
+
+        svg{
+          fill: #00498D;
+        }
+      }
+      
+      svg{
+        fill: #fff;
+        transition: 200ms ease;
+      }
     }
 
     &__main{
