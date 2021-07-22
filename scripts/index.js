@@ -34,3 +34,11 @@ CKEDITOR.replace('editor1', {
 // Remove the redundant buttons from toolbar groups defined above.
 removeButtons: 'Specialchar'
 });
+
+const tag = document.querySelectorAll('.tags-xl-tag');
+
+tag.forEach(el => {
+  el.addEventListener('click', ()=>{
+    el.classList.toggle('current');
+  })
+})
