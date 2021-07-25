@@ -230,6 +230,7 @@ body {
   margin-left: 6px;
   -webkit-transition: 200ms ease;
   transition: 200ms ease;
+  border: 2px solid #00498D;
 }
 .content__right__btn:hover {
   background: #fff;
