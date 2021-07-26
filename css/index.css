@@ -507,6 +507,11 @@ body {
   -webkit-transform: perspective(6000px) rotateX(100deg);
           transform: perspective(6000px) rotateX(100deg);
 }
+.popup__closeout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
 .popup__close-btn {
   margin: 15px 15px 0 auto;
   background: #8B8B8B;
