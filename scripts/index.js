@@ -36,11 +36,18 @@ removeButtons: 'Specialchar'
 });
 
 
-const tag = document.querySelectorAll('.tags-xl-tag');
+const tag = document.querySelectorAll('.asmuchasyoulike');
 
 tag.forEach(el => {
   el.addEventListener('click', ()=>{
     el.classList.toggle('current');
+  })
+})
+
+$(function() {
+  $('.limited').click(function() {
+    $('.limited').not(this).removeClass('current')
+    $(this).toggleClass('current')
   })
 })
 
